@@ -62,7 +62,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
     def input_number(self, v):
         if self.state == READY:
             self.state = INPUT
-            self.stack[-1] = v
+            self.stack[-1] = float(v)
         else:
             self.stack[-1] = self.stack[-1] * 10 + v
 
